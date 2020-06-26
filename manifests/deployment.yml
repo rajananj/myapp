@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rajananjmyapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rajananjmyapp 
+    spec:
+      containers:
+        - name: rajananjmyapp 
+          image: botmancontainerregistry.azurecr.io/rajananjmyapp
+          ports:
+          - containerPort: 8080
